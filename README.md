@@ -4,8 +4,8 @@ Few Cucumber test scenarios for Wikipedia
 
 Pre-requisites
 ==============
-ruby 1.9.3
-bundler - “gem install bundler”
+1. ruby 1.9.3
+2. bundler - “gem install bundler”
 
 Steps to execute the scenarios
 ==============================
