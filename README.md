@@ -10,5 +10,5 @@ Pre-requisites
 Steps to execute the scenarios
 ==============================
 1. Clone the repo
-2. run “”bundle install”
-3. run “”bundle exec cucumber -p local“
+2. run “bundle install”
+3. run “rake cucumber nodes=2"
