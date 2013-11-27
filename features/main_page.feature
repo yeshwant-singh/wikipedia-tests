@@ -1,4 +1,4 @@
-Feature: 
+Feature: Main Page 
   As an user 
   I should be able to view the wikipedia main page
 
