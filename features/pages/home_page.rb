@@ -1,16 +1,14 @@
-#require "selenium-webdriver"
-
 class HomePage
 
- #include DriverHelper
+ include DriverHelper
 
-  def initialize(browser)
+   def initialize(browser)
     @browser = browser
-  end
+   end
 
-  def visit
-    @browser.navigate.to "http://www.wikipedia.org/"
-  end
+   def visit
+    navigate("http://www.wikipedia.org/")
+   end
 
   def search(search_term, language = "English")
     enter_search_term(search_term)
@@ -20,17 +18,15 @@ class HomePage
   end
 
   def enter_search_term(search_term)
-    @browser.find_element(:name, "search").send_keys(search_term)
+    enter_text({:name => "search"}, search_term)
   end
 
   def select_language(language)
-    el_language = @browser.find_element(:name, "language")
-    el_option = el_language.find_element(:xpath, ".//option[text()='#{language}']")
-    el_option.click
-  end
+    select_option({:name => "language"}, language)
+   end
 
   def click_go_button
-    @browser.find_element(:name, "go").click
+    click_element({:name => "go"})
   end
 
 end

@@ -1,4 +1,5 @@
 require "selenium-webdriver"
+require  File.join(File.dirname(__FILE__), '..', '..', 'lib', 'driver_helper')
  
 if ENV['REMOTE'] == "true" 
 
@@ -9,6 +10,7 @@ if ENV['REMOTE'] == "true"
   capabilities['browser'] = ENV['BROWSER']
   capabilities['browser_version'] = ENV['BROWSER_VERSION']
   capabilities['build'] = ENV['BUILD'] || "Testing Parallel"
+  capabilities['browserstack.debug'] = 'true'
 
   browser = Selenium::WebDriver.for(:remote, :url => url,
                                   :desired_capabilities => capabilities)
@@ -19,6 +21,7 @@ end
 
 Before do |scenario|
   browser.manage.window.maximize
+  browser.manage.timeouts.page_load = 60
   @browser = browser
 end
 

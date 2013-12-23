@@ -13,14 +13,14 @@ Feature: Search
      | Indien      | Deutsch  |
 
 
-   Scenario Outline: Search from home page for articles that returns search results
-     Given I am on home page
-     When I search for <search_term> in <language>
-     Then I see the Search results page
+  Scenario Outline: Search from home page for articles that returns search results
+    Given I am on home page
+    When I search for <search_term> in <language>
+    Then I see the Search results page
      
-     Examples:
-     | search_term      | language |
-     | some search word | English  |
-
-
+    Examples:
+    | search_term      | language |
+    | some search word | English  |
+  
+ 
 
