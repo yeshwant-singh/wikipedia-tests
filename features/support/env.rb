@@ -19,6 +19,18 @@ elsif ENV['LOCAL'] == "true"
   browser = Selenium::WebDriver.for :chrome 
 end
 
+elsif ENV['HEADLESS'] = "true"
+  require 'headless'
+  headless = Headless.new
+  headless.start
+  
+  at_exit do
+    headless.destroy
+  end
+
+end
+
+
 Before do |scenario|
   browser.manage.window.maximize
   browser.manage.timeouts.page_load = 60
