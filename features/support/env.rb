@@ -17,7 +17,6 @@ if ENV['REMOTE'] == "true"
 
 elsif ENV['LOCAL'] == "true"
   browser = Selenium::WebDriver.for :chrome 
-end
 
 elsif ENV['HEADLESS'] = "true"
   require 'headless'
