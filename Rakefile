@@ -14,7 +14,7 @@ task :cucumber do
   begin
     Parallel.map(@browsers, :in_threads => @parallel_limit) do |browser|
         current_browser = browser
-        puts "Running with: #{browser.inspect}"
+        puts "Running with browser : #{browser.inspect}"
         ENV['BROWSER'] = browser['browser']
         ENV['BROWSER_VERSION'] = browser['browser_version']
         ENV['OS'] = browser['os']
