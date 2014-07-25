@@ -9,9 +9,8 @@ Feature: Search
 
     Examples:
      | search_term | language |
-     | India       | English  |
      | Indien      | Deutsch  |
-
+     | India       | English  |
 
   Scenario Outline: Search from home page for articles that returns search results
     Given I am on home page

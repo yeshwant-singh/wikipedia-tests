@@ -2,6 +2,8 @@ require "allure-cucumber"
 require "selenium-webdriver"
 require  File.join(File.dirname(__FILE__), '..', '..', 'lib', 'driver_helper')
  
+include AllureCucumber::DSL
+
 if ENV['REMOTE'] == "true" 
 
   url = "http://#{ENV['HUB_USERNAME']}:#{ENV['AUTH_KEY']}@#{ENV['HUB_NAME']}.browserstack.com:#{ENV['HUB_PORT']}/wd/hub"
@@ -27,7 +29,8 @@ Before do |scenario|
 end
 
 After do |scenario|
-
+   browser.save_screenshot('screen.png')
+   attach_file("screenshot", File.open("screen.png"))
 end
 
 at_exit do
