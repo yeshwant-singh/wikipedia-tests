@@ -5,5 +5,6 @@ gem "selenium-webdriver", ">0"
 gem 'parallel_tests'
 gem 'json'
 gem 'parallel'
+gem 'allure-cucumber'
 
 

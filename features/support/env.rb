@@ -1,3 +1,4 @@
+require "allure-cucumber"
 require "selenium-webdriver"
 require  File.join(File.dirname(__FILE__), '..', '..', 'lib', 'driver_helper')
  
@@ -18,18 +19,6 @@ if ENV['REMOTE'] == "true"
 elsif ENV['LOCAL'] == "true"
   browser = Selenium::WebDriver.for :chrome 
 end
-
-elsif ENV['HEADLESS'] = "true"
-  require 'headless'
-  headless = Headless.new
-  headless.start
-  
-  at_exit do
-    headless.destroy
-  end
-
-end
-
 
 Before do |scenario|
   browser.manage.window.maximize
