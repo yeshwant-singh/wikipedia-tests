@@ -1,14 +1,14 @@
 [
   {
     "browser": "firefox",
-    "browser_version": "23.0",
+    "browser_version": "24.0",
     "device": null,
     "os": "windows",
     "os_version": "7"
   },
   {
     "browser": "chrome",
-    "browser_version": "29.0",
+    "browser_version": "30.0",
     "device": null,
     "os": "Windows",
     "os_version": "7"
