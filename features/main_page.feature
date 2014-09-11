@@ -2,6 +2,7 @@ Feature: Main Page
   As an user 
   I should be able to view the wikipedia main page
 
+  @sanity
   Scenario: Featured Article is displayed
     When I am on main page
     Then Headings are displayed
