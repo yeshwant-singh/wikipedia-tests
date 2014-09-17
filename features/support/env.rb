@@ -19,7 +19,6 @@ if ENV['REMOTE'] == "true"
                                   :desired_capabilities => capabilities)
 
 
-
 elsif ENV['LOCAL'] == "true"
   browser = Selenium::WebDriver.for :chrome 
 	AllureCucumber.configure do |c|
