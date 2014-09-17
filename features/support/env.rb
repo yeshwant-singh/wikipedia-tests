@@ -1,4 +1,4 @@
-require "allure-cucumber"
+require 'allure-cucumber'
 require "selenium-webdriver"
 require  File.join(File.dirname(__FILE__), '..', '..', 'lib', 'driver_helper')
  
@@ -18,8 +18,13 @@ if ENV['REMOTE'] == "true"
   browser = Selenium::WebDriver.for(:remote, :url => url,
                                   :desired_capabilities => capabilities)
 
+
+
 elsif ENV['LOCAL'] == "true"
   browser = Selenium::WebDriver.for :chrome 
+	AllureCucumber.configure do |c|
+  	 c.output_dir = "gen/allure-artifacts"
+	end
 end
 
 Before do |scenario|
@@ -30,7 +35,7 @@ end
 
 After do |scenario|
    browser.save_screenshot('screen.png')
-   attach_file("screenshot", File.open("screen.png"))
+   attach_file('screenshot', File.open("screen.png"))
 end
 
 at_exit do

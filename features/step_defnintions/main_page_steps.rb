@@ -10,3 +10,4 @@ Then /^Headings are displayed$/ do |table|
       @main_page.heading_displayed?(heading[0].to_s).should be true
     end
 end
+
