@@ -13,5 +13,5 @@ Steps to execute the scenarios:
   4. To run the features in parallel in two browsers, execute `rake cucumber nodes=2`
 
 TODO:
-  1. Improve page objects
+  1. Improve page objects 
   2. Create module for webdriver hepler methods
