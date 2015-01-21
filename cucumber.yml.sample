@@ -2,4 +2,4 @@ parallel: --color --format pretty --format html -o report_<%=ENV['BROWSER']%><%=
 
 default: -r features --color --format pretty --format html -o results.html
 
-local: -r features --tag @sanity --format AllureCucumber::Formatter LOCAL=true
+local: -r features --tag @sanity --format junit -o test.xml --format pretty LOCAL=true
