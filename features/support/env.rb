@@ -34,7 +34,7 @@ end
 
 After do |scenario|
    browser.save_screenshot('screen.png')
-   attach_file('screenshot', File.open("screen.png"))
+   #attach_file('screenshot', File.open("screen.png"))
 end
 
 at_exit do
