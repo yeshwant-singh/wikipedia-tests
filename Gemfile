@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 gem "cucumber"
-gem "rspec"
+gem "rspec", "2.13"
 gem "selenium-webdriver"
 gem 'parallel_tests'
 gem 'json'
